@@ -18,7 +18,7 @@ def index(request):
         img.append(article['urlToImage'])
     mylist = zip(news, desc, img)
 
-    return render(request, "index.html", context={"mylist": mylist})
+    return render(request, "main/index.html", context={"mylist": mylist})
 import urllib.request
 import json
 from django.shortcuts import render
@@ -49,5 +49,5 @@ def weather(request):
     else:
         data = {}
 
-    return render(request, "weather.html", data)
+    return render(request, "main/weather.html", data)
 
